@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix - Your Watchlist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="transition-overlay"></div>
+    <header class="header" id="header">
+        <a onclick="transitionTo('home.html')" class="logo">MovieFlix</a>
+        <a onclick="transitionTo('home.html')"><img class="icon" src="img/profile.svg" alt="profile"></a>
+    </header>
+
+    <div style="margin-top: 4rem; padding: 20px;">
+        <h1 style="text-align: center; margin-bottom: 30px;">Your Watchlist</h1>
+        <p style="text-align: center; margin-bottom: 30px; color: #aaa;">Movies and shows you've saved</p>
+        <div class="watchlist-grid" id="watchlistContainer">
+            <div class="loader" style="display: block; margin: 50px auto;"></div>
+            <!-- Watchlist items will be loaded here -->
+        </div>
+    </div>
+
+    <div class="movie-details" id="movieDetails">
+        <button class="close-btn" id="closeDetailsBtn">&times;</button>
+        <div class="info-container" id="infoContainer">
+            <!-- Movie details will be populated here -->
+        </div>
+    </div>
+
+    <nav class="nav-bottom" id="nav-bottom">
+        <a onclick="transitionTo('home.html')"><img src="img/home.svg" alt="Home"></a>
+        <a onclick="transitionTo('watchlist.html')"><img src="img/watchlist.svg" alt="Watchlist"></a>
+        <a onclick="transitionTo('history.html')"><img src="img/history.svg" alt="History"></a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

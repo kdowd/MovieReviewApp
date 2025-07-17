@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+
+    <title>MovieFlix - Stream Your Favorite Movies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="transition-overlay">
+        
+    </div>
+    <header class="header" id="header">
+        <a href="#" class="logo">MovieFlix</a>
+        <a href=""><img class="icon" src="img/profile.svg" alt="profile"></a>
+        
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <datalist id="movieSuggestions"></datalist>
+            <button id="searchBtn">Search</button>
+            <button id="adultFilterBtn"> Adult : On</button>
+        </div>
+    </header>
+
+    <div class="banner" id="banner">
+        <div class="banner-content">
+            <h1 class="banner-title" id="bannerTitle">Movie Title</h1>
+            <p class="banner-description" id="bannerDescription">Movie description goes here...</p>
+            <div class="banner-buttons">
+                <button class="play-btn" id="playBannerBtn">Play</button>
+                <button class="info-btn" id="infoBannerBtn">More Info</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="categories">
+        <h2 class="category-title">Trending Now</h2>
+        <div class="movie-row" id="trendingMovies">
+            <div class="loader" id="trendingLoader"></div>
+            <!-- Movies will be added here dynamically -->
+        </div>
+    
+        <h2 class="category-title">Popular Movies</h2>
+        <div class="movie-row" id="popularMovies">
+            <div class="loader" id="popularLoader"></div>
+            <!-- Movies will be added here dynamically -->
+        </div>
+       
+        <h2 class="category-title">Top Rated</h2>
+        <div class="movie-row" id="topRatedMovies">
+            <div class="loader" id="topRatedLoader"></div>
+            <!-- Movies will be added here dynamically -->
+        </div>
+    </section>
+
+    <!-- Movie Details Page -->
+    <div class="movie-details" id="movieDetails">
+        <button class="close-btn" id="closeDetailsBtn">&times;</button>
+        <div class="info-container" id="infoContainer">
+            
+            <!-- Movie details will be populated here -->
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" onclick="showAboutUs(); return false;">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">FAQ</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <p class="copyright">© 2025 MovieFlix. All rights reserved.</p>
+    </footer>
+
+    <nav class="nav-bottom" id="nav-bottom">
+        <a onclick="transitionTo('intro.html')"><img src="img/home.svg" alt="Home"></a>
+        <a onclick="transitionTo('watchlist.html')"><img src="img/watchlist.svg" alt="Watchlist"></a>
+        <a onclick="transitionTo('history.html')"><img src="img/history.svg" alt="History"></a>
+    </nav>
+
+    <script src="script.js"></script>
+
+
+
+</body>
+</html>

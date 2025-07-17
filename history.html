@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix - Watch History</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="transition-overlay"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <a onclick="transitionTo('home.html')" class="logo">MovieFlix</a>
+        <a onclick="transitionTo('home.html')"><img class="icon" src="img/profile.svg" alt="profile"></a>
+    </header>
+
+    <!-- Main Content -->
+    <div style="margin-top: 4rem; padding: 20px;">
+        <h1 style="text-align: center; margin-bottom: 30px;">Your Watch History</h1>
+        <p style="text-align: center; margin-bottom: 30px; color: #aaa;">Movies and shows you've viewed recently</p>
+
+        <!-- History Grid -->
+        <div class="watchlist-grid" id="historyContainer">
+            <!-- History items will be populated here by JavaScript -->
+            <div class="loader" style="display: block; margin: 50px auto;"></div>
+        </div>
+    </div>
+
+    
+    <!-- Movie Details Overlay -->
+    <div class="movie-details" id="movieDetails">
+        <button class="close-btn" id="closeDetailsBtn">&times;</button>
+        <div class="info-container" id="infoContainer">
+            <!-- Movie details will be inserted here -->
+        </div>
+    </div>
+    
+    <!-- Navigation Bottom -->
+    <nav class="nav-bottom" id="nav-bottom">
+        <img src="img/home.svg" alt="home" onclick="transitionTo('home.html')">
+        <img src="img/watchlist.svg" alt="watchlist" onclick="transitionTo('watchlist.html')">
+        <img src="img/history.svg" alt="history" onclick="transitionTo('history.html')">
+    </nav>
+    
+    <script src="script.js"></script>
+</body>
+</html>
